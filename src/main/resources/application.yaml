@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: CMP_service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health
+
+elasticSearch:
+  # cloud elastic search
+  url: http://3.221.149.140:9200
+  indices: metrics.bep.worker.utilization, metrics.ocr.summary, metrics.bep.task.time-trace, metrics.bep.worker.resources, metrics.bep.results
+  username: elastic
+  password: ahZkI6Y5dCISTltYsOzl
